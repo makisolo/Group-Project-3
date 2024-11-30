@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifteen Puzzle Game</title>
+    <link rel="stylesheet" href="fifteen.css">
+  </head>
+    <body>
+      <header>
+        <h1>Fifteen Puzzle Game</h1>
+        <p>Arrange the tiles in numerical order to win! Use the empty space to move the tiles across the board.</p>
+      </header>
+      
+      <main>
+        <div id="game-board" class="grid-4x4"></div>
+
+        <div id="controls">
+          <button id="shuffle-btn">Shuffle</button>
+          <button id="restart-btn">Restart</button>
+          <button id="options-btn">Options</button>
+        </div>
+
+        <div id="stats">
+          <p>Moves: <span id="move-count">0</span></p>
+          <p>Time: <span id="elapsed-time">0:00</span></p>
+        </div>
+      </main>
+
+      <div id="options-modal" class="hidden">
+        <h2>Options</h2>
+        <label for="puzzle-size">Puzzle Size:</label>
+        <select id="puzzle-size">
+          <option value="3x3">3x3</option>
+          <option value="4x4" selected>4x4</option>
+          <option value="6x6">6x6</option>
+        </select>
+        
+        <label for="background-select">Background:</label>
+        <select id="background-select">
+          <option value="images/bg1.jpg">Background 1</option>
+          <option value="images/bg2.jpg">Background 2</option>
+          <option value="images/bg3.jpg">Background 3</option>
+          <option value="images/bg4.jpg">Background 4</option>
+        </select>
+
+        <label for="tile-transparency">Tile Transparency:</label>
+        <input type="checkbox" id="tile-transparency">
+
+        <button id="close-options">Close</button>
+      </div>
+
+      <div id="end-game-modal" class="hidden">
+        <h2>Congratulations!</h2>
+        <p>You completed the puzzle in <span id="final-moves"></span> moves and <span id="final-time"></span>.</p>
+        <button id="restart-btn-modal">Play Again</button>
+      </div>
+
+      <script src="fifteen.js"></script>
+    </body>
+</html>

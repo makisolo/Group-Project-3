@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  text-align: center;
+  background: var(--background-img, url('images/bgbg.jpg')); 
+  background-size: cover;
+  margin: 0;
+  color: #fff; 
+}
+
+/* Header Styling */
+header {
+  padding: 20px;
+  background: black; 
+  color: white; 
+}
+
+/* Game Board Styling */
+#game-board {
+  display: grid;
+  gap: 5px;
+  margin: 20px auto;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.3); 
+  border-radius: 10px;
+}
+
+/* Grid Layout for 4x4 */
+.grid-4x4 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+/* Tile Styling */
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 123, 255, 0.8); 
+  border: 1px solid #000;
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  opacity: 1; 
+  border-radius: 5px; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); 
+}
+
+
+.tile:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 123, 255, 1); 
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* Modal Styling (Options and End Game) */
+#options-modal, #end-game-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8); 
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Button Styling */
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  background: #007BFF;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: #0056b3;
+}
